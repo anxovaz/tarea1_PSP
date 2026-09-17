@@ -1,3 +1,5 @@
+import java.util.Properties;
+
 /**
  * Clase que devuelve datos sobre el sistema, como RAM, CPU, etc.
  *
@@ -42,6 +44,34 @@ public class InformeSistema {
     }
 
     /**
+     * Muestra las propiedades del sistema especificadas por argumento
+     *
+     * @param argumento
+     */
+    public static void mostrarPropiedades(String argumento) {
+        if (argumento.compareTo("") == 0) {
+            System.out.println(System.getProperties());
+        } else {
+            System.out.println(System.getProperty(argumento));
+        }
+    }
+
+    /**
+     * Muestra todas las propiedades del sistema
+     */
+    public static void mostrarPropiedades(){
+        System.out.println("os.name: " + System.getProperty("os.name"));
+        System.out.println("os.arch: " + System.getProperty("os.arch"));
+        System.out.println("os.name: " + System.getProperty("os.version"));
+        System.out.println("user.name: " + System.getProperty("user.name"));
+        System.out.println("user.home: " + System.getProperty("user.home"));
+        System.out.println("user.dir: " + System.getProperty("user.dir"));
+        System.out.println("java.version: " + System.getProperty("java.version"));
+        System.out.println("java.version.date: " + System.getProperty("java.version.date"));
+    }
+
+
+    /**
      * Lanzador principal
      * @param args
      */
@@ -67,5 +97,8 @@ public class InformeSistema {
         System.out.println("***************");
 
         InformeSistema.mostrarMultiplataforma();
+
+        System.out.println("------------ PROPIEDADES ------------");
+        InformeSistema.mostrarPropiedades();
     }
 }
