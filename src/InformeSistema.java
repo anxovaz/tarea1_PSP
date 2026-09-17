@@ -36,10 +36,12 @@ public class InformeSistema {
 
         System.out.println("Informe antes de reservar memoria 64MiB de memoria:");
         InformeSistema.mostrarMemoria();
-        long[] reservado = new long[8 * 1024 * 1024]; // 8 M · 8 bytes = 64 MiB
+        long[] reservado = new long[8 * 1024 * 1024]; // 8 M x 8 bytes = 64 MiB
         System.out.println("---");
         System.out.println("Informe después de reservar memoria 64MiB de memoria:");
+        reservado[0] = 1; //Para que el recolector de basura no borre el array
         InformeSistema.mostrarMemoria();
+
 
         System.out.println("*+*************");
 
