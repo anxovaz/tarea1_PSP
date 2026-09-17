@@ -34,6 +34,16 @@ public class InformeSistema {
 
         System.out.println("*+*************");
 
+        System.out.println("Informe antes de reservar memoria 64MiB de memoria:");
         InformeSistema.mostrarMemoria();
+        long[] reservado = new long[8 * 1024 * 1024]; // 8 M · 8 bytes = 64 MiB
+        System.out.println("---");
+        System.out.println("Informe después de reservar memoria 64MiB de memoria:");
+        InformeSistema.mostrarMemoria();
+
+        System.out.println("*+*************");
+
+
+
     }
 }
