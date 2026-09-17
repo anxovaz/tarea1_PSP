@@ -1,4 +1,4 @@
-import java.util.Properties;
+import java.util.Scanner;
 
 /**
  * Clase que devuelve datos sobre el sistema, como RAM, CPU, etc.
@@ -70,7 +70,6 @@ public class InformeSistema {
         System.out.println("java.version.date: " + System.getProperty("java.version.date"));
     }
 
-
     /**
      * Lanzador principal
      * @param args
@@ -90,10 +89,11 @@ public class InformeSistema {
         reservado[0] = 1; // Para evitar que el recolector de basura limpie la variable
 
         System.out.println("---");
+
+        long memoriaUsadaDespues = InformeSistema.getBytesMemoriaUso();
         System.out.println("Informe después de reservar 64MiB de memoria:");
         InformeSistema.mostrarMemoria();
-
-        System.out.println("Diferencia: " + ((InformeSistema.getBytesMemoriaUso() - memoriaUsadaAntes) / (1024 * 1024)) + " MiB");
+        System.out.println("-> Diferencia: " + ((memoriaUsadaDespues - memoriaUsadaAntes) / (1024 * 1024)) + " MiB");
 
         System.out.println("------------ SISTEMA ------------");
 
@@ -101,5 +101,12 @@ public class InformeSistema {
 
         System.out.println("------------ PROPIEDADES ------------");
         InformeSistema.mostrarPropiedades();
+
+        System.out.println("------------ ESPERA ------------");
+        System.out.println("ps -ef | grep InformeSistema\nPulsa ENTER para finalizar...");
+        Scanner sc = new Scanner(System.in);
+        sc.useDelimiter("\n");
+        sc.nextLine();
+        sc.close();
     }
 }
