@@ -57,10 +57,36 @@ System.out.println("Ruta archivo informe.txt: " + System.getProperty("user.home"
 
 Esta ruta se vería modificada por el divisor (`file.separator`) y por la ruta del `home`(`user.home`).
 
-Por ejemplo, si fuese en `windows` la salida sería parecida a esto:
+Por ejemplo, si fuese en `windows` la salida sería parecida a esta:
 
 ```
 C:\Usuarios\anxo\psp\informe.txt
+```
+
+## Tipo de Programación
+
+- a-Un servidor web que atiende 500 peticiones a la vez en una máquina de 8 núcleos.
+
+```
+Programación paralela, ya que aunque la máquina tenga muchos núcleos son muchas peticiones simultáneas y al usar programación concurrente se desperdiciaría los 8 núcleos del procesador. Él único inconveniente sería que, al ser una única máquina,si esa máquina "cae", se cae todo el sistema ya que no es distribuida.
+```
+
+- b-Renderizar una película de animación en un plazo de tres meses.
+
+```
+Programación concurrente, aunque la tarea sea pesada el plazo es muy grande y, de mientras, los otros procesadores se podrían usar sin problema para otro tipo de tareas.
+```
+
+- c-Una app de móvil que descarga un fichero mientras seguís navegando.
+
+```
+Programación paralela, se necesitan hacer varias cosas simultáneamente aunque sus tareas sean sencillas, el único inconveniente sería el "desperdicio" de tiempos en los procesadores para estas tareas.
+```
+
+- d-Un cálculo que no cabe en la RAM de un solo equipo.
+
+```
+Programación distribuida, al ser tan alta la demanda de un recurso (RAM, CPU, disco, etc) se necesitan varios equipos, el inconveniente principal sería el alto costo de estos.
 ```
 
 
