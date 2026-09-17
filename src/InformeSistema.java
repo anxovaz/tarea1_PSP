@@ -40,7 +40,7 @@ public class InformeSistema {
      */
     public static void mostrarMultiplataforma(){
         System.out.println("Sistema Operativo: " + System.getProperty("os.name") + " " + System.getProperty("os.version") + " " + System.getProperty("os.arch"));
-        System.out.println("Ruta archivo informe.txt: " + System.getProperty("user.home") + "/psp/informe.txt");
+        System.out.println("Ruta archivo informe.txt: " + System.getProperty("user.home") + System.getProperty("file.separator") + "psp" + System.getProperty("file.separator") + "informe.txt");
     }
 
     /**
@@ -77,9 +77,10 @@ public class InformeSistema {
      */
     public static void main(String[] args){
         System.out.println("Práctica 1 - Anxo Vázquez");
+        System.out.println("------------ PROCESADORES ------------");
         System.out.println("Número de procesadores (son hilos): " + InformeSistema.mostrarProcesadores());
 
-        System.out.println("*+*************");
+        System.out.println("------------ MEMORIA ------------");
 
         System.out.println("Informe antes de reservar 64MiB de memoria:");
         InformeSistema.mostrarMemoria();
@@ -94,7 +95,7 @@ public class InformeSistema {
 
         System.out.println("Diferencia: " + ((InformeSistema.getBytesMemoriaUso() - memoriaUsadaAntes) / (1024 * 1024)) + " MiB");
 
-        System.out.println("***************");
+        System.out.println("------------ SISTEMA ------------");
 
         InformeSistema.mostrarMultiplataforma();
 
