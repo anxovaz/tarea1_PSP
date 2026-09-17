@@ -36,5 +36,35 @@ Compruebo su `pid` y `ppid` y veo que cambian los dos, ahora el padre es `bash` 
 
 ![segundo ps](./capturas/ps2-programa.png)
 
+### Ejecución con `Xmx128m`
+
+`Xmx128m` establece la memoria límite que la `JVM` puede usar, al ejecutarlo con ese limite se puede ver que cambia la sección de memoria.
+
+**Limitado:**
+
+![limitado](./capturas/informe-limitado.png)
+
+**Sin limitación:**
+
+![sin-limitacion](./capturas/informe-sin-limitacion.png)
+
+### Ruta archivo `informe.txt`
+
+```
+//Sección del código InformeSistema, en la función mostrarMultiplataforma()
+System.out.println("Ruta archivo informe.txt: " + System.getProperty("user.home") + System.getProperty("file.separator") + "psp" + System.getProperty("file.separator") + "informe.txt");
+```
+
+Esta ruta se vería modificada por el divisor (`file.separator`) y por la ruta del `home`(`user.home`).
+
+Por ejemplo, si fuese en `windows` la salida sería parecida a esto:
+
+```
+C:\Usuarios\anxo\psp\informe.txt
+```
+
+
+
+
 
 
