@@ -25,6 +25,16 @@ public class InformeSistema {
     }
 
     /**
+     * Hace un print de el sistema operatico y una ruta a un archivo dentro de mi carpeta home
+     */
+    public static void mostrarMultiplataforma(){
+        //Imprime tipo de sistema, version (del kernel en caso de linux) y arquitectura
+        System.out.println("Sistema Operativo: " + System.getProperty("os.name") + " " + System.getProperty("os.version") + " " + System.getProperty("os.arch"));
+        //user.home para el directorio home y user.dir para el directorio de trabajo actual del usuario
+        System.out.println("Ruta archivo informe.txt: " + System.getProperty("user.home") + "/psp/informe.txt");
+    }
+
+    /**
      * Programa principal
      * @param args
      */
@@ -38,6 +48,7 @@ public class InformeSistema {
         InformeSistema.mostrarMemoria();
         long[] reservado = new long[8 * 1024 * 1024]; // 8 M x 8 bytes = 64 MiB
         System.out.println("---");
+        long[] reservado2 = reservado;
         System.out.println("Informe después de reservar memoria 64MiB de memoria:");
         reservado[0] = 1; //Para que el recolector de basura no borre el array
         InformeSistema.mostrarMemoria();
@@ -45,6 +56,7 @@ public class InformeSistema {
 
         System.out.println("*+*************");
 
+        InformeSistema.mostrarMultiplataforma();
 
 
     }
