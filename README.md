@@ -144,6 +144,15 @@ Programación paralela, se necesitan hacer varias cosas simultáneamente aunque 
 
 Programación distribuida, al ser tan alta la demanda de un recurso (RAM, CPU, disco, etc) se necesitan varios equipos, el inconveniente principal sería el alto costo de estos.
 
+## Bibliografía
+
+· Documentación oficial de java:
+
+- https://docs.oracle.com/javase/8/docs/api/java/lang/System.html#getProperty-java.lang.String-
+
+- https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Runtime.html
+
+- https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Properties.html
 
 
 
