@@ -144,6 +144,10 @@ Programación paralela, se necesitan hacer varias cosas simultáneamente aunque 
 
 Programación distribuida, al ser tan alta la demanda de un recurso (RAM, CPU, disco, etc) se necesitan varios equipos, el inconveniente principal sería el alto costo de estos.
 
+## Salida completa
+
+![salida-completa](./capturas/salida-completa.png)
+
 ## Errores cometidos
 
 ### Compilación
