@@ -146,7 +146,7 @@ Programación distribuida, al ser tan alta la demanda de un recurso (RAM, CPU, d
 
 ## Salida completa
 
-![salida-completa](./capturas/salida-completa.png)
+![salida-completa](./capturas/salida-completa2.png)
 
 ## Errores cometidos
 
