@@ -144,9 +144,19 @@ Programación paralela, se necesitan hacer varias cosas simultáneamente aunque 
 
 Programación distribuida, al ser tan alta la demanda de un recurso (RAM, CPU, disco, etc) se necesitan varios equipos, el inconveniente principal sería el alto costo de estos.
 
+## Errores cometidos
+
+### Compilación
+
+Al lanzar el programa desde la terminal mostraba un error relacionado con la versión de java con la que se había compilado, me fijé que la version de la terminal (`java --version`) y la del `IDE`(`Project Structure`) no coincidian, para ello cambie la versión de java en el `IDE` a la misma que tenía por terminal y volví a ejecutar para que cambiase el compilado `.class`.
+
+### Errores de calculo en la diferencia de memoria
+
+Al calcular la diferencia de memoria al asignar `64 MiB` cometí errores de lógica al convertir mal las unidades de `bytes` a `MiB` dandome así resultados muy elevados.
+
 ## Bibliografía
 
-· Documentación oficial de java:
+Documentación oficial de java - Consulta de métodos para extraer propiedades:
 
 - https://docs.oracle.com/javase/8/docs/api/java/lang/System.html#getProperty-java.lang.String-
 
