@@ -14,7 +14,7 @@
 
 ### `mostrarMemoria()`
 
-En este método utlizo la clase y método `Runtime.getRuntime` para mirar las propiedades de la memoria y dividirlas entre 1024 para que la muestre en `KiB`, para calcular la memoria en uso resto la memoria libre a la memoria total.
+En este método utilizo la clase y método `Runtime.getRuntime` para mirar las propiedades de la memoria y dividirlas entre 1024 para que la muestre en `KiB`, para calcular la memoria en uso resto la memoria libre a la memoria total.
 
 ```
 public static void mostrarMemoria(){
@@ -81,7 +81,7 @@ Ejecuto el programa y cuando entra en espera por la lectura del `scanner`, ejecu
 ps -ef | grep InformeSistema
 ```
 
-Al ejecutar el comando anterior se muestran dos entradas, la primera es de `InformeSistema` y la segunda es del `grep` que se uso para filtrar la busqueda dentro de la salida del ps.
+Al ejecutar el comando anterior se muestran dos entradas, la primera es de `InformeSistema` y la segunda es del `grep` que se usó para filtrar la búsqueda dentro de la salida del ps.
 
 El segundo (`PID`) y tercer (`PPID`) campo indican los identificadores del propio proceso y el del padre.
 
@@ -95,13 +95,13 @@ Si realizo la misma búsqueda pero indicando el `PPID` se muestra el proceso pad
 
 ![terminal-ejecución](./capturas/ejecucion-terminal.png)
 
-Compruebo su `pid` y `ppid` y veo que cambian los dos, ahora el padre es `bash` (interprete de comandos) y el `pid` cambio porque el sistema operativo le asignó otro.
+Compruebo su `pid` y `ppid` y veo que cambian los dos, ahora el padre es `bash` (intérprete de comandos) y el `pid` cambió porque el sistema operativo le asignó otro.
 
 ![segundo ps](./capturas/ps2-programa.png)
 
 ### Ejecución con `Xmx128m`
 
-`Xmx128m` establece la memoria límite que la `JVM` puede usar, al ejecutarlo con ese limite se puede ver que cambia la sección de memoria.
+`Xmx128m` establece la memoria límite que la `JVM` puede usar, al ejecutarlo con ese límite se puede ver que cambia la sección de memoria.
 
 **Limitado:**
 
@@ -130,7 +130,7 @@ C:\Usuarios\anxo\psp\informe.txt
 
 - a-Un servidor web que atiende 500 peticiones a la vez en una máquina de 8 núcleos.
 
-Programación paralela, ya que aunque la máquina tenga muchos núcleos son muchas peticiones simultáneas y al usar programación concurrente se desperdiciaría los 8 núcleos del procesador. Él único inconveniente sería que, al ser una única máquina,si esa máquina "cae", se cae todo el sistema ya que no es distribuida.
+Programación paralela, ya que aunque la máquina tenga muchos núcleos son muchas peticiones simultáneas y al usar programación concurrente se desperdiciaría los 8 núcleos del procesador. El único inconveniente sería que, al ser una única máquina,si esa máquina "cae", se cae todo el sistema ya que no es distribuida.
 
 - b-Renderizar una película de animación en un plazo de tres meses.
 
@@ -148,9 +148,9 @@ Programación distribuida, al ser tan alta la demanda de un recurso (RAM, CPU, d
 
 ### Compilación
 
-Al lanzar el programa desde la terminal mostraba un error relacionado con la versión de java con la que se había compilado, me fijé que la version de la terminal (`java --version`) y la del `IDE`(`Project Structure`) no coincidian, para ello cambie la versión de java en el `IDE` a la misma que tenía por terminal y volví a ejecutar para que cambiase el compilado `.class`.
+Al lanzar el programa desde la terminal mostraba un error relacionado con la versión de java con la que se había compilado, me fijé que la versión de la terminal (`java --version`) y la del `IDE`(`Project Structure`) no coincidían, para ello cambié la versión de java en el `IDE` a la misma que tenía por terminal y volví a ejecutar para que cambiase el compilado `.class`.
 
-### Errores de calculo en la diferencia de memoria
+### Errores de cálculo en la diferencia de memoria
 
 Al calcular la diferencia de memoria al asignar `64 MiB` cometí errores de lógica al convertir mal las unidades de `bytes` a `MiB` dandome así resultados muy elevados.
 
